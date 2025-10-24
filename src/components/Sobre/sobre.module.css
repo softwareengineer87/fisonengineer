@@ -1,0 +1,19 @@
+.container {
+  max-width: 130rem;
+  margin: 0 auto;
+  width: 100%;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  padding: 0 2%;
+}
+
+.sobre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.sobre p {
+  color: var(--color-gray);
+}

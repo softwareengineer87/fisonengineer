@@ -1,0 +1,53 @@
+.container {
+  max-width: 130rem;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+  padding: 0 2%;
+}
+
+.container h3 {
+  border-bottom: .2rem solid var(--color-green);
+  margin-bottom: 2rem;
+}
+
+.contato {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.left p {
+  line-height: 2rem;
+}
+
+.right {
+  display: flex;
+}
+
+.image {
+  object-fit: contain;
+  border-radius: 1rem;
+}
+
+.whats {
+  background-color: var(--color-greenlight);
+  padding: 2rem;
+  color: var(--color-bg);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 48rem) {
+  .contato {
+    flex-direction: row;
+  }
+}
