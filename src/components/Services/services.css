@@ -1,18 +1,16 @@
-.container {
-  max-width: 130rem;
-  width: 100%;
-  margin: 0 auto;
+.container-services {
   margin-top: 4rem;
   margin-bottom: 6rem;
   padding: 0 2%;
 }
 
-.container h3 {
+.container-services h3 {
   border-bottom: .2rem solid var(--color-green);
   margin-bottom: 2rem;
+  text-align: center;
 }
 
-.contato {
+.services {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -20,17 +18,17 @@
   gap: 4rem;
 }
 
-.left {
+.services-left {
   display: flex;
   flex-direction: column;
   gap: 4rem;
 }
 
-.left p {
+.services-left p {
   line-height: 2rem;
 }
 
-.right {
+.services-right {
   display: flex;
 }
 
@@ -47,7 +45,7 @@
 }
 
 @media screen and (min-width: 48rem) {
-  .contato {
+  .services {
     flex-direction: row;
   }
 }

@@ -6,19 +6,17 @@ function Sobre() {
   return (
     <section className={styles.container} id='sobre'>
       <div className={styles.sobre}>
-        <h3>Sobre a Dra. Laura</h3>
+        <h3>Sobre a Fison Engineer</h3>
         <p>
-          A Dra. Laura Bastos é Cirurgiã-Dentista formada pela
-          Universidade Federal do Rio Grande do Norte (UFRN).
-          Atua com ênfase em endodontia, implantodontia, reabilitação
-          oral e clínica geral. Seu atendimento é pautado na
-          excelência técnica, no acolhimento e na empatia, com base
-          em evidências científicas atualizadas. Seu compromisso é oferecer
-          uma experiência odontológica segura, confortável e personalizada para cada paciente.
+          A <strong>Fison Engineer</strong> tem a missão
+          de transformar idéas em soluções por meio da tecnologia,
+          com base na necessidade do cliente nós criamos soluções personalizadas
+          para atingir o objetivo do cliente.
         </p>
       </div>
     </section>
   );
+
 }
 
 export { Sobre }

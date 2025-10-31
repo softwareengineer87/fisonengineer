@@ -1,0 +1,32 @@
+.container-brands {
+  margin-top: 4rem;
+  background: linear-gradient(0deg, #3E3D3D 0%, #131212 100%, #131212 0%);
+  opacity: 0.7;
+}
+
+.container-brands .brands {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  transition: all .5s ease-in-out;
+  animation: animateBrands 5s cubic-bezier(.12, .20, .45, .25) infinite alternate;
+
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+.container-brands .brands .brand {
+  object-fit: cover;
+  color: var(--text);
+}
+
+@keyframes animateBrands {
+  from {
+    transform: translateX(-20rem);
+  }
+
+  to {
+    transform: translateX(100vw);
+  }
+}

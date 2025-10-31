@@ -1,0 +1,13 @@
+.bg-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.bg-header .pattern {
+  object-fit: cover;
+  mix-blend-mode: overlay;
+  opacity: 0.3;
+  pointer-events: none;
+}
