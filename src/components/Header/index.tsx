@@ -14,6 +14,10 @@ function Header() {
 
   const [open, setOpen] = useState<boolean>(false);
 
+  function openMenu() {
+    setOpen(true);
+  }
+
   return (
     <header className='container-header'>
       <Image
@@ -53,8 +57,8 @@ function Header() {
           </section>
           <section className='menu'>
             <span
-              onClick={() => setOpen(state => !state)}
-              className='icon-menu'>
+              onClick={openMenu}
+              className={`icon-menu ${open ? 'inactive' : 'active'}`}>
               <IconMenu4 />
             </span>
             <nav className={open ? 'open-menu' : 'links'}>

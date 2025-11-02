@@ -17,25 +17,27 @@ function Services() {
                performance impecável e foco em resultados reais.
             </p>
           </div>
-            <div className='service'>
-              <h4>Desenvolvimento de sistemas</h4>
-              <p>
-                Sistemas inteligentes, ágeis e feitos sob medida
-                para o seu negócio. Automatize processos, 
-              ganhe prdutividade e tenha o controle total da sua operação — tudo online.
-              </p>
-            </div>
+          <div className='line'></div>
+          <div className='service'>
+            <h4>Desenvolvimento de sistemas</h4>
+            <p>
+              Sistemas inteligentes, ágeis e feitos sob medida
+              para o seu negócio. Automatize processos, 
+            ganhe prdutividade e tenha o controle total da sua operação — tudo online.
+            </p>
           </div>
+        </div>
         <div className='services-right'>
-      <Image
-        src={imageService}
-        width={500}
-        height={750}
-        alt='Profissional trabalhando'
-      /> 
-      </div>
-    </div> 
- </section>
+          <Image
+            src={imageService}
+            width={500}
+            height={750}
+            alt='Profissional trabalhando'
+            className='image-service'
+          /> 
+        </div>
+      </div> 
+    </section>
   );
 } 
 

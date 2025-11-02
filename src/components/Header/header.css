@@ -17,6 +17,7 @@
   background-size: cover;
   opacity: 0.1;
   z-index: -2;
+  pointer-events: none;
 }
 
 .light-left {
@@ -93,6 +94,15 @@
 .icon-menu {
   color: var(--color-green);
   cursor: pointer;
+  z-index: 1;
+}
+
+.icon-menu.active {
+  display: flex;
+}
+
+.icon-menu.inactive {
+  display: none;
 }
 
 .open-menu {
@@ -115,9 +125,10 @@
   position: absolute;
   top: 0;
   right: 0;
-  background-color: var(--color-bg);
+  background-color: var(--subtitle);
   box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
   padding: 2rem;
+  backdrop-filter: blur(5px);
 }
 
 .icon-close {
@@ -128,7 +139,7 @@
 }
 
 .menu-links li span {
-  color: var(--text);
+  color: var(--bg);
   transition: all .5s ease-in-out;
 }
 
@@ -148,12 +159,16 @@
     box-shadow: none;
   }
 
+  .menu-links li span {
+  color: var(--text);
+  }
+
   .icon-close {
     display: none;
   }
 
   .icon-menu {
-    display: none;
+    display: none !important;
   }
 }
 
