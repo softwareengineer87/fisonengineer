@@ -1,0 +1,32 @@
+.container-cardjob .card-job {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  border: .1rem solid rgba(75, 73, 73, 80%);
+}
+
+.container-cardjob .card-job .image {
+  flex: 1;
+  object-fit: contain;
+  width: 100%;
+  height: 20rem;
+}
+
+.card-job .infos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 2rem 0;
+}
+
+.card-job .infos h3 {
+  color: var(--text);
+}
+
+.card-job .infos .btn-card {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 20%, #3D3B3B 80%);
+  padding: .5rem 2rem;
+  border-radius: 1rem;
+  color: var(--text);
+}
