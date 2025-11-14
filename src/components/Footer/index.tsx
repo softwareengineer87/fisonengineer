@@ -1,18 +1,27 @@
 import Link from 'next/link';
-import styles from './footer.module.css';
-import { IconDentalBroken, IconCopyright } from '@tabler/icons-react';
+import { IconCopyright } from '@tabler/icons-react';
+import Image from 'next/image';
+import logo from '../../../public/logo.svg';
+import './footer.css';
 
 function Footer() {
   return (
-    <footer className={styles.container}>
-      <div className={styles.footer}>
-        <div className={styles.left}>
-          <Link href='/'>
-            <h2 className={styles.logo}>Dra. Laura<IconDentalBroken />Bastos</h2>
-          </Link>
-        </div>
-        <div className={styles.right}>
-          <p>Todos os direitos<IconCopyright /> Dra. Laura Bastos.</p>
+    <footer className='container-footer'>
+      <div className='footer container'>
+        <Link href='#' className="whats">Soilicitar  orçamento</Link>
+        <div className='footer-left'>
+          <section className="logo">
+            <Link href='/'>
+              <Image
+                src={logo}
+                width={150}
+                height={50}
+                objectFit="cover"
+                alt="logotipo fison engineer"
+              />
+            </Link>
+          </section>
+          <p>Todos os direitos<IconCopyright /> Fison Engineer.</p>
         </div>
       </div>
     </footer>

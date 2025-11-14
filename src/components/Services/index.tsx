@@ -20,6 +20,16 @@ function Services() {
           </div>
           <div className='line'></div>
           <div className='service'>
+            <h4>Desenvolvimento de landing pages</h4>
+            <p>
+              Criamos landing pages com design moderno,
+              com carregamento rápido e que se adequa ao seu objetivo,
+              vender seu infoproduto?, divulgar seu serviço?, divulgar seu
+              evento?.
+            </p>
+          </div>
+          <div className='line'></div>
+          <div className='service'>
             <h4>Desenvolvimento de sistemas</h4>
             <p>
               Sistemas inteligentes, ágeis e feitos sob medida

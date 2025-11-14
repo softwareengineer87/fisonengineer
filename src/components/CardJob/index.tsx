@@ -29,7 +29,6 @@ function CardJob({
           <h3>{title}</h3>
           <Link
             href={link}
-
             target="_blank"
             className="btn-card"
           >

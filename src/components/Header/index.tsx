@@ -71,6 +71,7 @@ function Header() {
                 <li className='link'><Link href='#sobre'><span>Sobre</span></Link></li>
                 <li className='link'><Link href='#servicos'><span>Serviços</span></Link></li>
                 <li className='link'><Link href='#trabalhos'><span>Trabalhos</span></Link></li>
+                <li className='link'><Link href='#depoimentos'><span>Depoimentos</span></Link></li>
                 <li className='link'><Link href='#contato'><span>Contato</span></Link></li>
               </ul>
             </nav>

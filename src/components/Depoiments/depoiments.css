@@ -1,0 +1,65 @@
+.container-depoiments {
+  margin-top: 4rem;
+}
+
+.container-depoiments h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.container-depoiments .depoiments {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.depoiments .box-depoiments {
+  display: block ruby;
+  overflow-x: auto;
+  align-items: center;
+  transition: all 1s ease-in-out;
+
+}
+
+.depoiments .arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: .1rem solid var(--blue);
+  border-radius: 100%;
+  color: var(--text);
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.depoiments .depoiment {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  border: .1rem solid rgba(75, 73, 73, 80%);
+  padding: 2rem;
+}
+
+.depoiment.inactive {
+  display: none;
+}
+
+.depoiment.active {
+  display: flex;
+}
+
+.depoiments .depoiment p {
+  color: var(--text);
+}
+
+.depoiments .depoiment span {
+  color: var(--blue);
+}
+
+@media screen and (min-width: 48rem) {
+  .depoiments .box-depoiments {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

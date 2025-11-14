@@ -1,0 +1,65 @@
+.container-advantages {
+  background: linear-gradient(90deg, rgba(40, 39, 39, 0) 20%, #2e2c2c 50%, rgba(42, 41, 41, 0) 80%);
+  padding: 2rem;
+}
+
+.container-advantages h3 {
+  text-align: center;
+}
+
+.container-advantages .advantages {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.advantages .buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.advantages .buttons .btn-tab {
+  flex: 1;
+  background: linear-gradient(90deg, rgba(40, 39, 39, 0) 20%, #444141 50%, rgba(42, 41, 41, 0) 80%);
+  padding: 1rem;
+  color: var(--text);
+  border: .1rem solid #424242;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+  position: relative;
+}
+
+.buttons .btn-tab.active {
+  border-bottom: .1rem solid var(--blue);
+}
+
+.btn-tab.inactive {
+  border-bottom: none;
+}
+
+.advantages .buttons .btn-tab:hover {
+  background: linear-gradient(90deg, rgba(40, 39, 39, 0) 10%, #554141 50%, rgba(42, 41, 41, 0) 90%);
+}
+
+.advantages .tabs .tab {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.tabs .tab.active {
+  display: flex;
+}
+
+.tabs .tab.inactive {
+  display: none;
+}
+
+.tabs .tab p {
+  color: var(--text);
+}
+
+.tabs .tab .icon {
+  color: var(--blue);
+}

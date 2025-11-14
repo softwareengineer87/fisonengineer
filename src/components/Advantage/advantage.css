@@ -1,0 +1,14 @@
+.advantage .tab {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.tabs .tab p {
+  color: var(--text);
+}
+
+.tabs .tab .icon {
+  color: var(--blue);
+}

@@ -12,6 +12,7 @@ function Brands() {
         <Image className='brand' src={spotify} width={120} height={60} alt='Spotify' />
         <Image className='brand' src={convo} width={120} height={60} alt='Convo' />
         <Image className='brand' src={netflix} width={120} height={60} alt='Netflix' />
+        <Image className='brand' src={convo} width={120} height={60} alt='Convo' />
       </div>
     </section>
   );

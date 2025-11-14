@@ -1,37 +1,29 @@
 
 import { CardJob } from '../CardJob';
 import portfolio from '../../../public/portfolio.webp';
+import ffinance from '../../../public/ffinance.png';
+import studio from '../../../public/studio.webp';
 import './jobs.css';
 
 function Jobs() {
   return (
-    <section className='container-jobs'>
+    <section className='container-jobs' id='trabalhos'>
       <h3>Trabalhos criados</h3>
       <div className='jobs container'>
         <CardJob
           image={portfolio}
-          title='Portfolio'
+          title='Site agência'
           link='#'
         />
         <CardJob
-          image={portfolio}
-          title='Portfolio'
-          link='#'
-        />
-        <CardJob
-          image={portfolio}
-          title='Portfolio'
-          link='#'
-        />
-        <CardJob
-          image={portfolio}
+          image={ffinance}
           title='Sistema financeiro'
           link='#'
         />
         <CardJob
-          image={portfolio}
-          title='Sistema de agendamentos'
-          link='#'
+          image={studio}
+          title='Lavinia studio site'
+          link='https://laviniastudio.vercel.app/'
         />
       </div>
     </section>

@@ -32,3 +32,10 @@
     transform: translateX(100vw);
   }
 }
+
+@media screen and (max-width: 48rem) {
+  .container-brands .brands {
+    animation: none;
+    overflow-x: auto;
+  }
+}
