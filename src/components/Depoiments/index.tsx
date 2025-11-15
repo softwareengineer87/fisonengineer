@@ -49,7 +49,6 @@ function Depoiments() {
     <section className='container-depoiments' id='depoimentos'>
       <h3>Resultados dos nossos clientes</h3>
       <div className='depoiments container'>
-        <span className='arrow'><IconChevronLeft size={30} /></span>
         <div className='box-depoiments'>
           <div className='depoiment'>
             <h5>Ligia advogada</h5>
@@ -79,7 +78,6 @@ function Depoiments() {
             </p>
           </div>
         </div>
-        <span className='arrow'><IconChevronRight size={30} /></span>
       </div>
     </section>
   );

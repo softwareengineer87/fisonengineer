@@ -8,7 +8,12 @@ function Footer() {
   return (
     <footer className='container-footer'>
       <div className='footer container'>
-        <Link href='#' className="whats">Soilicitar  orçamento</Link>
+        <Link
+          href='https://wa.me//5584996102818?text=Quero saber mais sobre a criação do site'
+          target='_blank'
+          className="whats">
+          Soilicitar  orçamento
+        </Link>
         <div className='footer-left'>
           <section className="logo">
             <Link href='/'>
