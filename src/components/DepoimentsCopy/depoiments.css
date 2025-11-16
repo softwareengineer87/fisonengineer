@@ -8,6 +8,7 @@
 }
 
 .container-depoiments .depoiments {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,9 +16,10 @@
 }
 
 .depoiments .box-depoiments {
+  width: 40rem;
   display: block ruby;
-  overflow-x: auto;
   align-items: center;
+  overflow: hidden;
   transition: all 1s ease-in-out;
 
 }
@@ -34,20 +36,27 @@
 }
 
 .depoiments .depoiment {
+  width: 40rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   align-items: center;
   border: .1rem solid rgba(75, 73, 73, 80%);
   padding: 2rem;
-}
-
-.depoiment.inactive {
-  display: none;
+  margin-left: 0;
+  transition: all 1s ease-in-out;
 }
 
 .depoiment.active {
-  display: flex;
+  margin-left: -40rem;
+}
+
+.depoiment.next {
+  margin-left: -40rem;
+}
+
+.depoiment.prev {
+  margin-left: 40rem;
 }
 
 .depoiments .depoiment p {

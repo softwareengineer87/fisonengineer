@@ -6,6 +6,7 @@ import { Brands } from "@/components/Brands";
 import { Services } from "@/components/Services";
 import { Advantages } from "@/components/Advantages";
 import { Depoiments } from "@/components/Depoiments";
+import { DepoimentsCopy } from "@/components/DepoimentsCopy";
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
       <Sobre />
       <Services />
       <Advantages />
-      <Depoiments />
+      <DepoimentsCopy />
       <Footer />
     </main>
   );
