@@ -65,7 +65,6 @@ function DepoimentsCopy() {
             inline: "center"
           });
         }
-        console.log(currentIndex);
       });
 
     }
