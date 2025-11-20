@@ -20,20 +20,31 @@ function renderDepoiment(title: string, description: string) {
     </div>
   );
 }
-const depoiments = document.querySelectorAll('.depoiment');
 
 function DepoimentsCopy() {
 
   let currentIndex = 0;
 
 
-  const arrowLeft = useRef(null);
-  const arrowRight = useRef(null);
+  const arrowLeft = useRef<HTMLSpanElement>(null);
+  const arrowRight = useRef<HTMLSpanElement>(null);
+  const div1 = useRef<HTMLDivElement>(null);
+  const div2 = useRef<HTMLDivElement>(null);
+  const div3 = useRef<HTMLDivElement>(null);
+  const div4 = useRef<HTMLDivElement>(null);
+  const div5 = useRef<HTMLDivElement>(null);
 
   const arrows = [arrowLeft.current, arrowRight.current];
+  const depoimentsRefs = [
+    div1,
+    div2,
+    div3,
+    div4,
+    div5
+  ];
 
   arrows.forEach((arrow, index) => {
-    const lenDepoiments = depoiments.length - 1;
+    const lenDepoiments = depoimentsRefs.length - 1;
     if (arrow !== null) {
       arrow.addEventListener('click', () => {
         if (index === 0) {
@@ -47,10 +58,13 @@ function DepoimentsCopy() {
             currentIndex = 0;
           }
         }
-        depoiments[currentIndex].scrollIntoView({
-          behavior: "smooth",
-          inline: "center"
-        });
+        const currentDepoiment = depoimentsRefs[currentIndex].current;
+        if (currentDepoiment !== null) {
+          currentDepoiment.scrollIntoView({
+            behavior: "smooth",
+            inline: "center"
+          });
+        }
         console.log(currentIndex);
       });
 
@@ -69,7 +83,7 @@ function DepoimentsCopy() {
           <IconChevronLeft size={30} />
         </span>
         <div className='box-depoiments'>
-          <div className={`depoiment`}>
+          <div ref={div1} className={`depoiment`}>
             <h5>Ligia advogada</h5>
             <p>
               <IconQuotes size={20} stroke={.5} />
@@ -78,7 +92,7 @@ function DepoimentsCopy() {
               <span><IconQuotes size={20} stroke={.5} /></span>
             </p>
           </div>
-          <div className='depoiment'>
+          <div ref={div2} className='depoiment'>
             <h5>Clinica Lobo</h5>
             <p>
               <IconQuotes size={20} stroke={.5} />
@@ -87,7 +101,7 @@ function DepoimentsCopy() {
               <span><IconQuotes size={20} stroke={.5} /></span>
             </p>
           </div>
-          <div className='depoiment'>
+          <div ref={div3} className='depoiment'>
             <h5>Anna</h5>
             <p>
               <IconQuotes size={20} stroke={.5} />
@@ -96,7 +110,7 @@ function DepoimentsCopy() {
               <span><IconQuotes size={20} stroke={.5} /></span>
             </p>
           </div>
-          <div className='depoiment'>
+          <div ref={div4} className='depoiment'>
             <h5>Advocacia cardoso</h5>
             <p>
               <IconQuotes size={20} stroke={.5} />
@@ -105,7 +119,7 @@ function DepoimentsCopy() {
               <span><IconQuotes size={20} stroke={.5} /></span>
             </p>
           </div>
-          <div className='depoiment'>
+          <div ref={div5} className='depoiment'>
             <h5>Contabilidade</h5>
             <p>
               <IconQuotes size={20} stroke={.5} />
