@@ -16,7 +16,7 @@
 }
 
 .depoiments .box-depoiments {
-  width: 100%;
+  max-width: 90rem;
   display: block ruby;
   align-items: center;
   overflow-x: hidden;
@@ -36,7 +36,7 @@
 }
 
 .depoiments .depoiment {
-  width: 40rem;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -70,5 +70,9 @@
 @media screen and (min-width: 48rem) {
   .depoiments .box-depoiments {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .depoiments .depoiment {
+    width: 40rem;
   }
 }
