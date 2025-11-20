@@ -13,12 +13,12 @@ function Jobs() {
         <CardJob
           image={portfolio}
           title='Site agência'
-          link='#'
+          link='https://fisonengineer.vercel.app/'
         />
         <CardJob
           image={ffinance}
           title='Sistema financeiro'
-          link='#'
+          link='https://ffinance-frontend.vercel.app/'
         />
         <CardJob
           image={studio}

@@ -6,50 +6,65 @@ import {
   IconChevronRight
 } from '@tabler/icons-react';
 import './depoiments.css';
-import { useEffect, useState } from 'react';
+import { useRef } from 'react';
+
+function renderDepoiment(title: string, description: string) {
+  return (
+    <div className='depoiment'>
+      <h5>{title}</h5>
+      <p>
+        <IconQuotes size={20} stroke={.5} />
+        {description}
+        <span><IconQuotes size={20} stroke={.5} /></span>
+      </p>
+    </div>
+  );
+}
+const depoiments = document.querySelectorAll('.depoiment');
 
 function DepoimentsCopy() {
 
-  const [next, setNext] = useState<boolean>(false);
-  let i = 0;
+  let currentIndex = 0;
 
-  function nextSlide() {
-    const depoiments = document.querySelectorAll('.depoiment');
-    depoiments[0].classList.add('next');
-    if (depoiments[i].classList.contains('next')) {
-      depoiments[i].classList.remove('next');
-    } else {
-      depoiments[i].classList.add('next');
-    }
-    i++;
-    if (i === depoiments.length - 1) {
-      i = 0;
-    }
-    console.log(depoiments[i]);
-  }
 
-  function prevSlide() {
-    const depoiments = document.querySelectorAll('.depoiment');
-    depoiments[0].classList.add('next');
-    if (depoiments[i].classList.contains('next')) {
-      depoiments[i].classList.remove('next');
-    } else {
-      depoiments[i].classList.add('next');
+  const arrowLeft = useRef(null);
+  const arrowRight = useRef(null);
+
+  const arrows = [arrowLeft.current, arrowRight.current];
+
+  arrows.forEach((arrow, index) => {
+    const lenDepoiments = depoiments.length - 1;
+    if (arrow !== null) {
+      arrow.addEventListener('click', () => {
+        if (index === 0) {
+          currentIndex--;
+          if (currentIndex < 0) {
+            currentIndex = lenDepoiments;
+          }
+        } else {
+          currentIndex++;
+          if (currentIndex > lenDepoiments) {
+            currentIndex = 0;
+          }
+        }
+        depoiments[currentIndex].scrollIntoView({
+          behavior: "smooth",
+          inline: "center"
+        });
+        console.log(currentIndex);
+      });
+
     }
-    i++;
-    if (i === depoiments.length - 1) {
-      i = 0;
-    }
-    console.log(depoiments[i]);
-  }
+
+  });
 
   return (
     <section className='container-depoiments' id='depoimentos'>
       <h3>Resultados dos nossos clientes</h3>
       <div className='depoiments container'>
         <span
-          className='arrow'
-          onClick={prevSlide}
+          className='arrow arrow-left'
+          ref={arrowLeft}
         >
           <IconChevronLeft size={30} />
         </span>
@@ -101,8 +116,8 @@ function DepoimentsCopy() {
           </div>
         </div>
         <span
-          className='arrow'
-          onClick={nextSlide}
+          className='arrow arrow-right'
+          ref={arrowRight}
         >
           <IconChevronRight size={30} />
         </span>

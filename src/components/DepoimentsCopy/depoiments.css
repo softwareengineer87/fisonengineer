@@ -16,10 +16,10 @@
 }
 
 .depoiments .box-depoiments {
-  width: 40rem;
+  width: 100%;
   display: block ruby;
   align-items: center;
-  overflow: hidden;
+  overflow-x: hidden;
   transition: all 1s ease-in-out;
 
 }
